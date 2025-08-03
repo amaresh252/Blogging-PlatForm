@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const path = require("path");
 require("dotenv").config();
 
 const authRoutes = require("./routes/Auth");
@@ -19,7 +20,7 @@ server.use(express.json());
 server.get("/", (req, res) => {
   res.send("Server is ready");
 });
-
+server.use(express.static(path.resolve(__dirname,'build')))
 server.use("/api/auth", authRoutes);
 server.use("/api/blogs", blogRoutes);
 connectDatabase();

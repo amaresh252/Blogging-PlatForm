@@ -23,7 +23,7 @@ export const Login = () => {
       return;
     }
 
-    const response = await fetch("http://localhost:8080/api/auth/login", {
+    const response = await fetch("/api/auth/login", {
       method: "POST",
       body: JSON.stringify({ username, password }),
       headers: { "content-type": "application/json" },

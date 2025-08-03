@@ -24,7 +24,7 @@ export const CreateBlog = () => {
       return;
     }
     const token = localStorage.getItem("token");
-    const response = await fetch("http://localhost:8080/api/blogs", {
+    const response = await fetch("/api/blogs", {
       method: "POST",
       body: JSON.stringify({ detail, topic }),
       headers: {

@@ -26,7 +26,7 @@ export const BlogEdit = () => {
     }
     const token = localStorage.getItem("token");
 
-    const response = await fetch(`http://localhost:8080/api/blogs/${_id}`, {
+    const response = await fetch(`/api/blogs/${_id}`, {
       method: "PUT",
       body: JSON.stringify({ detail, topic }),
       headers: {
@@ -49,7 +49,7 @@ export const BlogEdit = () => {
       try {
         console.log(_id);
         const token = localStorage.getItem("token");
-        const response = await fetch(`http://localhost:8080/api/blogs/${_id}`, {
+        const response = await fetch(`/api/blogs/${_id}`, {
           headers: {
             "content-type": "application/json",
             Authorization: `Bearer ${token}`,

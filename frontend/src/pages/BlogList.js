@@ -16,7 +16,7 @@ export const BlogList = () => {
     }
     const fetchData = async () => {
       try {
-        const response = await fetch(`/api/blogs`, {
+        const response = await fetch(`https://blogging-plat-form.vercel.app/api/blogs`, {
           headers: {
             "content-type": "application/json",
             Authorization: `Bearer ${token}`,
@@ -39,7 +39,7 @@ export const BlogList = () => {
   const handleDelete = async (e, id) => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(`/api/blogs/${id}`, {
+      const response = await fetch(`https://blogging-plat-form.vercel.app/api/blogs/${id}`, {
         method: "DELETE",
         headers: {
           "content-type": "application/json",

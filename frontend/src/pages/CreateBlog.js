@@ -24,7 +24,7 @@ export const CreateBlog = () => {
       return;
     }
     const token = localStorage.getItem("token");
-    const response = await fetch("/api/blogs", {
+    const response = await fetch("https://blogging-plat-form.vercel.app/api/blogs", {
       method: "POST",
       body: JSON.stringify({ detail, topic }),
       headers: {

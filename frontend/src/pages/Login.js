@@ -23,7 +23,7 @@ export const Login = () => {
       return;
     }
 
-    const response = await fetch("/api/auth/login", {
+    const response = await fetch("https://blogging-plat-form.vercel.app/api/auth/login", {
       method: "POST",
       body: JSON.stringify({ username, password }),
       headers: { "content-type": "application/json" },

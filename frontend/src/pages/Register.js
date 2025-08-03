@@ -27,7 +27,7 @@ export const Register = () => {
       return;
     }
 
-    const response = await fetch("/api/auth/register", {
+    const response = await fetch("https://blogging-plat-form.vercel.app/api/auth/register", {
       method: "POST",
       body: JSON.stringify({ name, username, password }),
       headers: { "content-type": "application/json" },
